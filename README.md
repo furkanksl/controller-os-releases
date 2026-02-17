@@ -8,22 +8,22 @@ Get the latest version at **[controlleros.furkanksl.com](https://controlleros.fu
 
 ## How Updates Work
 
-ControllerOS checks for updates automatically on launch. When a new version is available, you'll be prompted to download and install it directly from the app.
+ControllerOS checks for updates automatically on launch. The app fetches `update.json` from the latest GitHub release to determine if a newer version is available. If there is one, you'll be prompted to download and install it directly from the app.
 
-The app reads [`update.json`](update.json) to determine if a newer version is available.
+## Release Assets
 
-## Supported Platforms
+Each release includes:
 
-| Platform | Architecture | File |
-|----------|-------------|------|
-| macOS | Universal (Apple Silicon + Intel) | `controller-os.app.tar.gz` |
+| File | Description |
+|------|-------------|
+| `controller-os.app.tar.gz` | Universal macOS app (Apple Silicon + Intel) |
+| `controller-os.app.tar.gz.sig` | Update signature for integrity verification |
+| `update.json` | Version manifest used by the in-app updater |
 
 ## Verifying Downloads
 
-All update artifacts are signed with a Tauri update signature (`.sig` files). The app verifies signatures automatically before installing any update.
+All update artifacts are signed with a Tauri update signature. The app verifies signatures automatically before installing any update.
 
 ## Links
 
 - **Website:** [controlleros.furkanksl.com](https://controlleros.furkanksl.com)
-- **Support:** [controlleros.furkanksl.com](https://controlleros.furkanksl.com)
-
